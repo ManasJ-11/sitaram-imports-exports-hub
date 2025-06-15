@@ -1,7 +1,11 @@
 
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const Contact = () => {
+  const handleContactUs = () => {
+    window.open('https://airtable.com/appUbE0UdDtf1OiN4/shrEBaKODjfcHGjco', '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,76 +81,21 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white text-gray-900 p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-2">First Name</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Last Name</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="john@example.com"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Phone</label>
-                <input 
-                  type="tel" 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Service Interest</label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
-                  <option>Select a service</option>
-                  <option>Export Services</option>
-                  <option>Import Services</option>
-                  <option>Customs Clearance</option>
-                  <option>Logistics & Transportation</option>
-                  <option>Trade Consultation</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea 
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Tell us about your trade requirements..."
-                ></textarea>
-              </div>
-              
+          {/* Contact Us Button Section */}
+          <div className="flex items-center justify-center">
+            <div className="bg-white text-gray-900 p-8 rounded-xl text-center max-w-md w-full">
+              <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>
+              <p className="text-gray-600 mb-8">
+                Contact us today to discuss your export requirements and get a personalized quote for your business needs.
+              </p>
               <button 
-                type="submit" 
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                onClick={handleContactUs}
+                className="w-full bg-blue-600 text-white py-4 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2 text-lg"
               >
-                <Send size={20} />
-                Send Message
+                Contact Us
+                <ExternalLink size={20} />
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
