@@ -1,7 +1,17 @@
-
 import { ArrowRight, Globe, TrendingUp, Star } from "lucide-react";
 
 const Hero = () => {
+  const handleExploreProducts = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleGetQuote = () => {
+    window.open('https://airtable.com/appUbE0UdDtf1OiN4/shrEBaKODjfcHGjco', '_blank');
+  };
+
   return (
     <section id="home" className="relative bg-gradient-to-br from-orange-50 via-white to-orange-100 text-orange-900 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-200/30 to-orange-300/20 animate-pulse"></div>
@@ -20,11 +30,17 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-scale-in" style={{ animationDelay: "0.5s" }}>
-              <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:scale-105 transition-all duration-200 flex items-center gap-2 group shadow-lg">
+              <button 
+                onClick={handleExploreProducts}
+                className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:scale-105 transition-all duration-200 flex items-center gap-2 group shadow-lg"
+              >
                 Explore Products
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
               </button>
-              <button className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white hover:scale-105 transition-all duration-200 shadow-lg">
+              <button 
+                onClick={handleGetQuote}
+                className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white hover:scale-105 transition-all duration-200 shadow-lg"
+              >
                 Get Quote
               </button>
             </div>
