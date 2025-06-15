@@ -9,13 +9,11 @@ const Header = () => {
     <header className="bg-white shadow-xl sticky top-0 z-50 border-b-2 border-orange-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo - New SitaRam logo */}
+          {/* Logo - SITARAM Text */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/3e8113ad-b2ce-469f-90b9-129e61445fc5.png" 
-              alt="SitaRam Export - Premium Indian Exports" 
-              className="h-14 w-auto"
-            />
+            <h1 className="text-3xl md:text-4xl font-bold text-orange-800 tracking-wider">
+              SITARAM
+            </h1>
           </div>
 
           {/* Desktop Navigation */}

@@ -9,11 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/lovable-uploads/3e8113ad-b2ce-469f-90b9-129e61445fc5.png" 
-                alt="SitaRam Export" 
-                className="h-12 w-auto"
-              />
+              <h3 className="text-2xl font-bold text-white tracking-wider">SITARAM</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner for premium Indian exports, bringing authentic 
