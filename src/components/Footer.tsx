@@ -1,9 +1,6 @@
-
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-black text-white py-16 border-t border-gray-800">
+  return <footer className="bg-black text-white py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -55,10 +52,7 @@ const Footer = () => {
                   SP Road, Morbi 363641
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-amber-400" />
-                <span className="text-gray-300 text-sm">+91 98765 43210</span>
-              </div>
+              
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-amber-400" />
                 <span className="text-gray-300 text-sm">info@sitaramexport.com</span>
@@ -80,8 +74,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
