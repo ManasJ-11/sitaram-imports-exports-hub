@@ -49,8 +49,8 @@ const Contact = () => {
                   <div>
                     <div className="font-medium">Address</div>
                     <div className="text-gray-300">
-                      Trade Plaza, Business District<br />
-                      Mumbai, Maharashtra 400001
+                      Sitaram Exports<br />
+                      SP Road, Morbi 363641
                     </div>
                   </div>
                 </div>

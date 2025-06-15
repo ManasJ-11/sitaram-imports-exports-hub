@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
@@ -44,19 +44,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Our Exports</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Premium Spices</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Traditional Textiles</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Ayurvedic Products</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Handicrafts</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Organic Foods</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Tea & Coffee</a></li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-white">Contact Info</h4>
@@ -64,8 +51,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={18} className="text-amber-400" />
                 <span className="text-gray-300 text-sm">
-                  Export House, Trade Center<br />
-                  Ayodhya, Uttar Pradesh 224001
+                  Sitaram Exports<br />
+                  SP Road, Morbi 363641
                 </span>
               </div>
               <div className="flex items-center space-x-3">
