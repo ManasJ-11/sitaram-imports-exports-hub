@@ -1,63 +1,52 @@
 
 import { Award, Calendar, FileText, Shield, CheckCircle } from "lucide-react";
+import { useCertificates } from "@/hooks/useCertificates";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Certificates = () => {
-  const certificates = [
-    {
-      id: 1,
-      name: "Export License",
-      type: "Government Authorization",
-      issuer: "Directorate General of Foreign Trade",
-      issueDate: "2023-01-15",
-      expiryDate: "2028-01-15",
-      status: "Active"
-    },
-    {
-      id: 2,
-      name: "ISO 9001:2015",
-      type: "Quality Management",
-      issuer: "International Organization for Standardization",
-      issueDate: "2022-06-10",
-      expiryDate: "2027-06-10",
-      status: "Active"
-    },
-    {
-      id: 3,
-      name: "APEDA Registration",
-      type: "Agricultural Export",
-      issuer: "Agricultural and Processed Food Products Export Development Authority",
-      issueDate: "2023-03-20",
-      expiryDate: "2028-03-20",
-      status: "Active"
-    },
-    {
-      id: 4,
-      name: "GST Registration",
-      type: "Tax Compliance",
-      issuer: "GST Council",
-      issueDate: "2022-04-01",
-      expiryDate: "2025-04-01",
-      status: "Active"
-    },
-    {
-      id: 5,
-      name: "FSSAI License",
-      type: "Food Safety",
-      issuer: "Food Safety and Standards Authority of India",
-      issueDate: "2023-02-14",
-      expiryDate: "2026-02-14",
-      status: "Active"
-    },
-    {
-      id: 6,
-      name: "Spices Board Certification",
-      type: "Spice Quality",
-      issuer: "Spices Board of India",
-      issueDate: "2022-11-05",
-      expiryDate: "2025-11-05",
-      status: "Active"
-    }
-  ];
+  const { data: certificates, isLoading, error } = useCertificates();
+
+  if (isLoading) {
+    return (
+      <section id="certificates" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Certifications</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Certified excellence and compliance for trusted global export operations
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[...Array(6)].map((_, index) => (
+              <div key={index} className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                <div className="bg-gradient-to-r from-orange-600 to-orange-500 h-16"></div>
+                <div className="p-6">
+                  <Skeleton className="h-6 w-3/4 mb-2 bg-gray-700" />
+                  <Skeleton className="h-4 w-1/2 mb-4 bg-gray-700" />
+                  <Skeleton className="h-4 w-full mb-2 bg-gray-700" />
+                  <Skeleton className="h-4 w-full mb-4 bg-gray-700" />
+                  <Skeleton className="h-10 w-full bg-gray-700" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="certificates" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Certifications</h2>
+            <p className="text-xl text-red-400">Failed to load certificates. Please try again later.</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="certificates" className="py-20 bg-black">
@@ -70,7 +59,7 @@ const Certificates = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((certificate) => (
+          {certificates?.map((certificate) => (
             <div key={certificate.id} className="bg-gray-900 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group border border-gray-800">
               <div className="relative bg-gradient-to-r from-orange-600 to-orange-500 h-16 flex items-center justify-center">
                 <div className="absolute top-4 right-4">
@@ -105,7 +94,7 @@ const Certificates = () => {
                     <Calendar size={16} className="mr-2 text-gray-400" />
                     <span className="font-medium">Valid:</span>
                     <span className="ml-1">
-                      {new Date(certificate.issueDate).toLocaleDateString()} - {new Date(certificate.expiryDate).toLocaleDateString()}
+                      {new Date(certificate.issue_date).toLocaleDateString()} - {new Date(certificate.expiry_date).toLocaleDateString()}
                     </span>
                   </div>
                 </div>
