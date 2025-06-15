@@ -10,14 +10,10 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/6472af89-7d35-4247-a97b-50141b8d605a.png" 
-                alt="Sitaram Export" 
-                className="h-10 w-auto"
+                src="/lovable-uploads/3e8113ad-b2ce-469f-90b9-129e61445fc5.png" 
+                alt="SitaRam Export" 
+                className="h-12 w-auto"
               />
-              <div>
-                <h3 className="text-xl font-bold text-white">SITARAM</h3>
-                <p className="text-sm text-amber-400">EXPORT</p>
-              </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner for premium Indian exports, bringing authentic 
@@ -92,7 +88,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Sitaram Export. All rights reserved.
+            © 2024 SitaRam Export. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-amber-400 text-sm transition-colors duration-200">Privacy Policy</a>

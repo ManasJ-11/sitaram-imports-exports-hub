@@ -9,12 +9,12 @@ const Header = () => {
     <header className="bg-white shadow-xl sticky top-0 z-50 border-b-2 border-orange-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo - Just the circular image */}
+          {/* Logo - New SitaRam logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/6472af89-7d35-4247-a97b-50141b8d605a.png" 
-              alt="Sitaram Export - Lord Rama and Sita" 
-              className="h-14 w-14 rounded-full shadow-lg border-2 border-orange-300"
+              src="/lovable-uploads/3e8113ad-b2ce-469f-90b9-129e61445fc5.png" 
+              alt="SitaRam Export - Premium Indian Exports" 
+              className="h-14 w-auto"
             />
           </div>
 
