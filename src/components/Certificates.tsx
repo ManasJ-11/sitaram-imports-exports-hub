@@ -10,8 +10,7 @@ const Certificates = () => {
       issuer: "Directorate General of Foreign Trade",
       issueDate: "2023-01-15",
       expiryDate: "2028-01-15",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400"
+      status: "Active"
     },
     {
       id: 2,
@@ -20,8 +19,7 @@ const Certificates = () => {
       issuer: "International Organization for Standardization",
       issueDate: "2022-06-10",
       expiryDate: "2027-06-10",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400"
+      status: "Active"
     },
     {
       id: 3,
@@ -30,8 +28,7 @@ const Certificates = () => {
       issuer: "Agricultural and Processed Food Products Export Development Authority",
       issueDate: "2023-03-20",
       expiryDate: "2028-03-20",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400"
+      status: "Active"
     },
     {
       id: 4,
@@ -40,8 +37,7 @@ const Certificates = () => {
       issuer: "GST Council",
       issueDate: "2022-04-01",
       expiryDate: "2025-04-01",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400"
+      status: "Active"
     },
     {
       id: 5,
@@ -50,8 +46,7 @@ const Certificates = () => {
       issuer: "Food Safety and Standards Authority of India",
       issueDate: "2023-02-14",
       expiryDate: "2026-02-14",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400"
+      status: "Active"
     },
     {
       id: 6,
@@ -60,8 +55,7 @@ const Certificates = () => {
       issuer: "Spices Board of India",
       issueDate: "2022-11-05",
       expiryDate: "2025-11-05",
-      status: "Active",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400"
+      status: "Active"
     }
   ];
 
@@ -78,12 +72,7 @@ const Certificates = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((certificate) => (
             <div key={certificate.id} className="bg-gray-900 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group border border-gray-800">
-              <div className="relative">
-                <img 
-                  src={certificate.image} 
-                  alt={certificate.name}
-                  className="w-full h-32 object-cover"
-                />
+              <div className="relative bg-gradient-to-r from-orange-600 to-orange-500 h-16 flex items-center justify-center">
                 <div className="absolute top-4 right-4">
                   <div className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
                     <CheckCircle size={12} />
